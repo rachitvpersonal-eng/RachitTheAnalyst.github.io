@@ -11,6 +11,51 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!-- Custom CSS to fix 2x2 grid layout -->
+		<style>
+			/* Force 2-column grid for posts section */
+			.posts {
+				display: grid !important;
+				grid-template-columns: repeat(2, 1fr) !important;
+				grid-gap: 2.5rem !important;
+				gap: 2.5rem !important;
+			}
+
+			.posts article {
+				width: 100% !important;
+				margin: 0 !important;
+				display: flex !important;
+				flex-direction: column !important;
+			}
+
+			/* Ensure images maintain aspect ratio */
+			.posts article .image.fit img {
+				width: 100%;
+				height: auto;
+			}
+
+			/* Make sure it stays 2 columns on larger tablets */
+			@media screen and (min-width: 737px) and (max-width: 1280px) {
+				.posts {
+					grid-template-columns: repeat(2, 1fr) !important;
+					grid-gap: 2rem !important;
+				}
+			}
+
+			/* Keep 2 columns on standard tablets */
+			@media screen and (max-width: 980px) and (min-width: 737px) {
+				.posts {
+					grid-template-columns: repeat(2, 1fr) !important;
+				}
+			}
+
+			/* Only switch to 1 column on mobile phones */
+			@media screen and (max-width: 736px) {
+				.posts {
+					grid-template-columns: 1fr !important;
+				}
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 

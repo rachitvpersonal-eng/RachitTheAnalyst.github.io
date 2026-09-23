@@ -10,7 +10,29 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript>
+					<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			section.posts {
+				display: flex;
+				flex-wrap: wrap;
+			}
+			section.posts article {
+				display: flex;
+				flex-direction: column;
+				flex: 0 1 50%;
+			}
+			section.posts article .image.fit img {
+				height: 220px;
+				object-fit: cover;
+				width: 100%;
+			}
+			section.posts article p {
+				flex-grow: 1;
+			}
+		</style>
+	</head><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
 
@@ -112,7 +134,11 @@
 	<ul class="icons alt">
 		<li><a href="https://www.linkedin.com/in/rachit-varma-172463222" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
 		<li><a href="https://github.com/rachitvpersonal-eng" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-		<li><a href="https://rachitvarma4.substack.com/" class="icon solid alt fa-rss"><span class="label">Substack</span></a></li>
+		<li><a href="https://rachitvarma4.substack.com/" class="icon alt" style="display:flex;align-items:center;justify-content:center;">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 17.822 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/>
+</svg>
+<span class="label">Substack</span></a></li>
 	</ul>
 </section>
 					</footer>
